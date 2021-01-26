@@ -1,6 +1,6 @@
 ---
 nome: Mapa
-backgroundColor: yellow
+backgroundColor: "#FAEBD7"
 ordem: 4
 ---
 

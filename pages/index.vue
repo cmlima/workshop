@@ -8,7 +8,8 @@
     >
       <div 
         class="conteudo-sessao d-flex flex-column align-items-center justify-content-center" 
-        :class="{ overlay: secao.overlay, 'pagina-inteira': secao.paginaInteira }">
+        :class="{ overlay: secao.overlay, 'pagina-inteira': secao.paginaInteira }"
+        :style="getTextStyle(secao)">
 
         <nuxt-content :document="secao" />
 
@@ -39,6 +40,11 @@ export default {
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center center',
         backgroundSize: 'cover'
+      }
+    },
+    getTextStyle(secao) {
+      return {
+        color: secao.color ? secao.color : ''
       }
     }
   }
