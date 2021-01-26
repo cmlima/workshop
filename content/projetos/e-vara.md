@@ -3,8 +3,10 @@ titulo: Programa e-Vara
 descricao: Repensando os serviços cartorários para o mundo digital.
 data_inicio: 01/01/2017
 status: Fase piloto (Santos)
-equipe: UCIN
+equipe: ijusplab
 ---
+
+[Voltar](/equipes/ijusplab)
 
 # Programa e-Vara
 
@@ -28,50 +30,18 @@ Como se vê, a Instituição está atuando para construir um modelo organizacion
 
 ## Diretrizes em Destaque
 
-<b-container>
-  <b-row>
-    <b-col>
+<div class="d-flex flex-row flex-wrap">
 
-      ![](https://www.jfsp.jus.br/documentos/administrativo/GADI/programa-e-vara/01-racionalizacao.jpg)
+![](https://www.jfsp.jus.br/documentos/administrativo/GADI/programa-e-vara/01-racionalizacao.jpg)
+![](https://www.jfsp.jus.br/documentos/administrativo/GADI/programa-e-vara/02-rede-colaborativa.jpg)
+![](https://www.jfsp.jus.br/documentos/administrativo/GADI/programa-e-vara/03-mapeamento.jpg)
+![](https://www.jfsp.jus.br/documentos/administrativo/GADI/programa-e-vara/04-satisfacao.jpg)
+![](https://www.jfsp.jus.br/documentos/administrativo/GADI/programa-e-vara/05-canais.jpg)
+![](https://www.jfsp.jus.br/documentos/administrativo/GADI/programa-e-vara/06-identifica.jpg)
+
+</div>
+
       
-    </b-col>
-    <b-col>
-
-      ![](https://www.jfsp.jus.br/documentos/administrativo/GADI/programa-e-vara/02-rede-colaborativa.jpg)
-      
-    </b-col>
-
-  </b-row>
-  <b-row>
-    <b-col>
-
-      ![](https://www.jfsp.jus.br/documentos/administrativo/GADI/programa-e-vara/03-mapeamento.jpg)
-      
-    </b-col>
-    <b-col>
-
-      ![](https://www.jfsp.jus.br/documentos/administrativo/GADI/programa-e-vara/04-satisfacao.jpg)
-      
-    </b-col>
-
-  </b-row>
-  <b-row>
-    <b-col>
-
-      ![](https://www.jfsp.jus.br/documentos/administrativo/GADI/programa-e-vara/05-canais.jpg)
-      
-    </b-col>
-    <b-col>
-
-      ![](https://www.jfsp.jus.br/documentos/administrativo/GADI/programa-e-vara/06-identifica.jpg)
-      
-    </b-col>
-
-  </b-row>
-</b-container>
-
-
-
 ## Acesse mais informações
 
 - [Documento final do Programa e-Vara](https://www.jfsp.jus.br/documentos/administrativo/GADI/programa-e-vara/projeto-relatorio-final.pdf)

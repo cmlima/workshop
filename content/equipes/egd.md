@@ -1,8 +1,9 @@
 ---
-nome: Equipe de Gestão de Dados
-descricao:
+nome: Incubadora de Soluções Tecnológicas 
+logo: imagens/logos/incubadora.png
 ---
 
+[Voltar](/)
 # Equipe de Gestão de Dados
 
 ![](https://www.jfsp.jus.br/documentos/administrativo/UCIN/inovajusp/gestao-dados/Imagens/egd_fundo_transparente_colorido_medio.png)
@@ -28,3 +29,7 @@ III - automatizar e aprimorar fluxos de trabalho.
 Assista à [REPORTAGEM](https://youtu.be/NjCrZUPbo0o) produzida pelo Núcleo de Comunicação Social.
 
 [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/NjCrZUPbo0o/0.jpg)](http://www.youtube.com/watch?v=NjCrZUPbo0o)
+
+## Portfolio
+
+[Projeto 1](/projetos/projeto-1)

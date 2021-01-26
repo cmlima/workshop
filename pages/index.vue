@@ -1,5 +1,23 @@
 <template>
   <div class="scroll-container">
+
+    <!-- Seção principal -->
+    <section 
+      class="container-secao" :style="getBackgroundStyle(principal)"
+      :class="{ overlay: principal.overlay }">
+
+      <div class="conteudo-sessao pagina-inteira d-flex flex-column align-items-center justify-content-center">
+        <img :src="principal.logo"  height="200" style="background-color: lightgrey; margin: 10px; padding: 10px 20px; border-radius: 5px;">
+
+        <div class="container-seta pa-4">
+          <svg class="seta" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          </svg>          
+        </div> 
+      </div>
+    </section>
+
+    <!-- Seções customizadas -->
     <section
       v-for="(secao, index) in secoes"
       :key="`s-${index}`"
@@ -13,7 +31,7 @@
 
         <nuxt-content :document="secao" />
 
-        <div v-if="secao.paginaInteira && index < secoes.length - 1" class="container-seta pa-4">
+        <div class="container-seta pa-4">
           <svg class="seta" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
           </svg>          
@@ -21,14 +39,43 @@
 
       </div>
     </section>
+
+    <!-- Galeria -->
+
+    <section class="container-secao" :style="getBackgroundStyle(galeria)">
+      <secao-galeria :style="getTextStyle(sobre)" :fotos="galeria.fotos"></secao-galeria>      
+    </section>
+
+
+    <!-- Localização -->
+
+    <section class="container-secao" :style="getBackgroundStyle(localizacao)">
+      <secao-localizacao :style="getTextStyle(sobre)" :iframe="localizacao.iframe"></secao-localizacao>      
+    </section>
+
+    <!-- Sobre (footer) -->
+
+    <section class="container-secao" :style="getBackgroundStyle(sobre)">
+      <secao-sobre :style="getTextStyle(sobre)"
+        :logo="sobre.logo" 
+        :titulo="sobre.titulo" 
+        :subtitulo="sobre.subtitulo" 
+        :endereco="sobre.endereco" 
+        :copyright="sobre.copyright"
+      ></secao-sobre>      
+    </section>
+
+
   </div>
 </template>
 
 <script>
 export default {
   async asyncData({ $content }) {
+    const home = await $content('home').fetch();
+    const { principal, galeria, localizacao, sobre } = home;
     const secoes = await $content('secoes').sortBy('ordem').fetch();
-    return { secoes };
+    return { principal, galeria, localizacao, sobre, secoes };
   },
   methods: {
     getBackgroundStyle(secao) {

@@ -1,10 +1,8 @@
 <template>
-  <div>
-    <div
-      class="projeto d-flex align-items-center justify-content-center"
-    >
-      <h1 class="display-1 text-center">{{ projeto.titulo }}</h1>
-    </div>
+  <div
+    class="scroll-container p-5"
+  >
+    <nuxt-content class="conteudo" :document="projeto" />
   </div>
 </template>
 
@@ -12,11 +10,11 @@
 export default {
   async asyncData({ $content, params, error }) {
     let projeto;
-    try {
-      projeto = await $content('projetos', params.slug).fetch();
-    } catch (e) {
-      return error({ statusCode: 404 })
-    }
+    projeto = await $content('projetos', params.slug)
+      .fetch()
+      .catch((err) => {
+        return error({ statusCode: 404 })
+      });
     if (!projeto || !params.slug) {
       return error({ statusCode: 404 })
     }
@@ -26,8 +24,13 @@ export default {
 </script>
 
 <style>
-.projeto {
-  min-height: 100vh;
-  min-width: 100vw;
+.scroll-container {
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.conteudo {
+  height: 100%;
 }
 </style>
