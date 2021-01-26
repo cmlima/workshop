@@ -1,5 +1,5 @@
 <template>
-  <div fluid class="main-container bg-light">
+  <div fluid class="main-container bg-light d-flex flex-column align-items-center justify-content-center">
     <Nuxt />
   </div>
 </template>
