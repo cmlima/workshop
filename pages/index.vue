@@ -6,7 +6,7 @@
       class="secao d-flex align-items-center justify-content-center"
       :style="{ backgroundColor: secao['background-color']}"
     >
-      <h1 class="display-1">{{ secao.nome }}</h1>
+      <h1 class="display-1 text-center">{{ secao.nome }}</h1>
     </div>
   </div>
 </template>
