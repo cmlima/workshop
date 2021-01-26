@@ -1,5 +1,5 @@
 <template>
-  <div fluid class="main-container bg-light d-flex flex-column align-items-center justify-content-center">
+  <div class="main-container bg-light">
     <Nuxt />
   </div>
 </template>
@@ -10,21 +10,13 @@ html, body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
+  overflow: hidden;
 }
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-.main-container {
-  min-height: 100vh;
-  min-width: 100vw;
 }
 
 </style>
