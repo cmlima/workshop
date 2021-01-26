@@ -1,5 +1,5 @@
 ---
 nome: Sobre
-background-color: gray
+backgroundColor: gray
 ordem: 5
 ---

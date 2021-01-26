@@ -1,7 +1,8 @@
 ---
 nome: Principal
-background-color: blue
+backgroundColor: blue
 background: imagens/backgrounds/lab3.jpg
+paginaInteira: true
 ordem: 1
 ---
 

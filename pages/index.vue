@@ -8,11 +8,11 @@
     >
       <div 
         class="conteudo-sessao d-flex flex-column align-items-center justify-content-center" 
-        :class="{ overlay: secao.overlay }">
+        :class="{ overlay: secao.overlay, 'pagina-inteira': secao.paginaInteira }">
 
         <nuxt-content :document="secao" />
 
-        <div v-if="index < secoes.length - 1" class="container-seta pa-4">
+        <div v-if="secao.paginaInteira && index < secoes.length - 1" class="container-seta pa-4">
           <svg class="seta" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
           </svg>          
@@ -31,8 +31,8 @@ export default {
   },
   methods: {
     getBackgroundStyle(secao) {
-      const image = secao['background'];
-      const color = secao['background-color'];
+      const image = secao.background;
+      const color = secao.backgroundColor;
       return {
         backgroundColor: color || 'transparent',
         backgroundImage: image ? `url(${image})` : '',
@@ -54,14 +54,15 @@ export default {
 }
 .container-secao {
   scroll-snap-align: start;
-  min-height: 100vh;
-  min-width: 100vw;
 }
 
 .conteudo-sessao {
-  min-height: 100vh;
-  min-width: 100vw;
+  max-width: 100%;
   position: relative;
+}
+
+.pagina-inteira {
+  min-height: 100vh;
 }
 
 .overlay {

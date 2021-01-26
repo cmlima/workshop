@@ -1,6 +1,7 @@
 ---
 nome: UCIN
-background-color: orange
+backgroundColor: orange
 background: imagens/backgrounds/ucin1.jpg
+paginaInteira: true
 ordem: 2
 ---

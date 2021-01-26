@@ -1,5 +1,5 @@
 ---
 nome: Mapa
-background-color: yellow
+backgroundColor: yellow
 ordem: 4
 ---
