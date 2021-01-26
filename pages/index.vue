@@ -12,6 +12,12 @@
 
         <nuxt-content :document="secao" />
 
+        <div v-if="index < secoes.length - 1" class="container-seta pa-4">
+          <svg class="seta" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          </svg>          
+        </div> 
+
       </div>
     </section>
   </div>
@@ -25,11 +31,11 @@ export default {
   },
   methods: {
     getBackgroundStyle(secao) {
-      const imageUrl = secao['background-image'];
+      const image = secao['background'];
       const color = secao['background-color'];
       return {
         backgroundColor: color || 'transparent',
-        backgroundImage: imageUrl ? `url('${imageUrl}')` : '',
+        backgroundImage: image ? `url(${image})` : '',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center center',
         backgroundSize: 'cover'
@@ -55,9 +61,33 @@ export default {
 .conteudo-sessao {
   min-height: 100vh;
   min-width: 100vw;
+  position: relative;
 }
 
 .overlay {
   background-color: rgba(0, 0, 0, 0.6);
+}
+
+.container-seta {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  bottom: 0;
+}
+
+.seta {
+  stroke: lightgray;
+  width: 60px;
+  height: 60px;
+  animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+  from {
+    margin-top: 0;
+  }
+  to {
+    margin-top: -15px;
+  }
 }
 </style>

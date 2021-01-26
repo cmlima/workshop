@@ -1,8 +1,7 @@
 ---
 nome: Principal
 background-color: blue
-background-image: imagens/backgrounds/principal.jpg
-overlay: true
+background: imagens/backgrounds/lab3.jpg
 ordem: 1
 ---
 
