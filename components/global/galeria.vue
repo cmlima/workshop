@@ -22,11 +22,11 @@ export default {
   column-count: 4;
   column-gap: 0px;
   max-height: 480px;
-  max-width: 96vw;
+  max-width: 100vw;
   overflow: hidden;
 }
 .galeria-imagem {
-  width: 24vw !important;
+  width: 25vw !important;
   height: 220px !important;
   object-fit: cover;
 }

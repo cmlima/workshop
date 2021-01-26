@@ -48,7 +48,8 @@ export default {
 <style>
 .scroll-container {
   height: 100vh;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
   scroll-snap-type: mandatory;
   scroll-snap-type: y mandatory;
 }
